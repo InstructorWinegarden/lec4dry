@@ -1,3 +1,82 @@
+min(1, 4, 0)
+
+min(20/19, pi / 3, 1.2)
+
+#question mark in front of fn gives you docs
+?min
+
+add_numbers <- function(a, b) {
+  answer = a + b
+  return(answer)
+}
+
+add_numbers(7, 9)
+
+num_new <- add_numbers(50, 47)
+
+#find circumference of circle based on diameter
+circumference_from_diameter <- function(diameter) {
+  circumference <- diameter * pi
+  return(circumference)
+}
+#when you create variable inside a function they are temp,
+#don't show up in global
+circumference_from_diameter(2)
+
+my_circ <- circumference_from_diameter(2)
+
+#arrow vs equals sign
+#https://stackoverflow.com/questions/1741820/what-are-the-differences-between-and-assignment-operators
+
+#function contradict
+#input: some text: statement
+#output: "statement," the instructor said incorrectly.
+
+text <- "a piece of text"
+text2 <- "a piece of \"text\" with quotes"
+
+paste("a", "set", "of", "words")
+paste0("a", "set", "of", "words")
+
+contradict <- function(statement) {
+  contradiction <- paste0("\"", statement, "\" the instructor said incorrectly")
+}
+
+contradict <- function(statement) {
+  contradiction <- paste0("\"", 
+                       statement, 
+                       ",\" the instructor said incorrectly"
+                       )
+  contradiction
+}
+
+print(contradict("I am not so bad at instructing"))
+
+con1 <- contradict("I am not so bad at instructing")
+con1
+print(con1)
+typeof(con1)
+noquote(con1)
+?noquote
+#escape characters for quotes
+#https://faculty.nps.edu/sebuttre/home/R/text.html
+
+####################PT2################
+#debugging
+#text <- "hello sup
+#a <- 1+ 1
+#val <- min(1, 3
+
+#try to close stuff ) } " ' ""
+
+#val <- min(1, 3
+
+#show not closing things properly again
+fn1 <- function(a) {
+  result <- a * 2
+  return(result)
+  
+}
 
 #use a debug demo
 #general quadratic equation: ax^2 + bx + c = 0
